@@ -48,12 +48,6 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 <param name="ios-package" value="CorHttpd" />
 </feature>
 </config-file>
-<source-file src="src/ios/MyHTTPConnection.h" />
-<source-file src="src/ios/MyHTTPConnection.m" />
-<source-file src="src/ios/MyWebSocket.h" />
-<source-file src="src/ios/MyWebSocket.m" />
-<source-file src="src/ios/PhoneWebSocket.h" />
-<source-file src="src/ios/PhoneWebSocket.m" />
 
 <source-file src="src/ios/CorHttpd.m" />
 
@@ -109,6 +103,13 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 <source-file src="src/ios/CocoaHttpd/Vendor/CocoaLumberjack/Extensions/ContextFilterLogFormatter.m" />
 <source-file src="src/ios/CocoaHttpd/Vendor/CocoaLumberjack/Extensions/DispatchQueueLogFormatter.h" />
 <source-file src="src/ios/CocoaHttpd/Vendor/CocoaLumberjack/Extensions/DispatchQueueLogFormatter.m" />
+
+<source-file src="src/ios/MyHTTPConnection.h" />
+<source-file src="src/ios/MyHTTPConnection.m" />
+<source-file src="src/ios/MyWebSocket.h" />
+<source-file src="src/ios/MyWebSocket.m" />
+<source-file src="src/ios/PhoneWebSocket.h" />
+<source-file src="src/ios/PhoneWebSocket.m" />
 
 <framework src="CFNetwork.framework" />
 <framework src="Foundation.framework" />
