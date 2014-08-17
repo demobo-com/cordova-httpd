@@ -48,6 +48,12 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 <param name="ios-package" value="CorHttpd" />
 </feature>
 </config-file>
+<source-file src="src/ios/MyHTTPConnection.h" />
+<source-file src="src/ios/MyHTTPConnection.m" />
+<source-file src="src/ios/MyWebSocket.h" />
+<source-file src="src/ios/MyWebSocket.m" />
+<source-file src="src/ios/PhoneWebSocket.h" />
+<source-file src="src/ios/PhoneWebSocket.m" />
 
 <source-file src="src/ios/CorHttpd.m" />
 

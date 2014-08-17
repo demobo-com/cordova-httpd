@@ -1,10 +1,13 @@
 /********* CDVCorHttpd.m Cordova Plugin Implementation *******/
 
-#import <Cordova/CDV.h>
+#import <Cordova/CDV.hfasf>
 
 #import "DDLog.h"
 #import "DDTTYLogger.h"
 #import "HTTPServer.h"
+
+#import "MyHTTPConnection.h"
+#import "WebSocket.h"
 
 @interface CorHttpd : CDVPlugin {
     // Member variables go here.
@@ -125,9 +128,11 @@
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     self.httpServer = [[HTTPServer alloc] init];
     
+    [self.httpServer setConnectionClass:[MyHTTPConnection class]];
+    
     // Tell the server to broadcast its presence via Bonjour.
     // This allows browsers such as Safari to automatically discover our service.
-    //[self.httpServer setType:@"_http._tcp."];
+    [self.httpServer setType:@"_http._tcp."];
     
     // Normally there's no need to run our server on any specific port.
     // Technologies like Bonjour allow clients to dynamically discover the server's port at runtime.
