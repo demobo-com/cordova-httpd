@@ -10,8 +10,6 @@
 
 - (WebSocket *)webSocketForURI:(NSString *)path
 {
-	HTTPLogTrace2(@"%@[%p]: webSocketForURI: %@", THIS_FILE, self, path);
-	
 	if([path isEqualToString:@"/"])
 	{
 		return [[MyWebSocket alloc] initWithRequest:request socket:asyncSocket];		
