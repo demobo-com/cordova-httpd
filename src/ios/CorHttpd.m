@@ -1,6 +1,6 @@
 /********* CDVCorHttpd.m Cordova Plugin Implementation *******/
 
-#import <Cordova/CDV.hfasf>
+#import <Cordova/CDV.h>
 
 #import "DDLog.h"
 #import "DDTTYLogger.h"
