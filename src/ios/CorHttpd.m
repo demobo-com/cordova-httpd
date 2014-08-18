@@ -141,17 +141,6 @@
     
     [self.httpServer setPort:port];
     
-    // Serve files from our embedded Web folder
-    const char * str = [wwwRoot UTF8String];
-    if(*str == '/') {
-        self.localPath = wwwRoot;
-    } else {
-        NSString* basePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"www"];
-        self.localPath = [NSString stringWithFormat:@"%@/%@", basePath, wwwRoot];
-    }
-    NSLog(@"Setting document root: %@", self.localPath);
-    [self.httpServer setDocumentRoot:self.localPath];
-    
 	NSError *error;
 	if([self.httpServer start:&error]) {
         int listenPort = [self.httpServer listeningPort];
