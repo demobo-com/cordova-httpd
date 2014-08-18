@@ -108,8 +108,6 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 <source-file src="src/ios/MyHTTPConnection.m" />
 <source-file src="src/ios/MyWebSocket.h" />
 <source-file src="src/ios/MyWebSocket.m" />
-<source-file src="src/ios/PhoneWebSocket.h" />
-<source-file src="src/ios/PhoneWebSocket.m" />
 
 <framework src="CFNetwork.framework" />
 <framework src="Foundation.framework" />

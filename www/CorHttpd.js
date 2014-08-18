@@ -32,5 +32,13 @@ corhttpd_exports.getLocalPath = function(success, error) {
 	  exec(success, error, "CorHttpd", "getLocalPath", []);
 };
 
+corhttpd_exports.getIP = function(success, error) {
+    var getURLsuccess = function(url) {
+        var ip = url.split("/")[2].split(":")[0];
+        success(ip);
+    };
+    exec(getURLsuccess, error, "CorHttpd", "getURL", []);
+};
+
 module.exports = corhttpd_exports;
 

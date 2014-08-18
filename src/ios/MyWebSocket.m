@@ -11,17 +11,17 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN | HTTP_LOG_FLAG_TRACE;
 - (void)didOpen
 {
 	HTTPLogTrace();
-	
+
 	[super didOpen];
 	
-	[self sendMessage:@"welcome"];
+	// [self sendMessage:@"welcome"];
 }
 
 - (void)didReceiveMessage:(NSString *)msg
 {
-	HTTPLogTrace2(@"%@[%p]: didReceiveMessage: %@", THIS_FILE, self, msg);
-	
-	[self sendMessage: msg];
+	NSDictionary   *dict = [NSDictionary dictionaryWithObject: msg forKey: @"message"];
+    // Notify HTTPServer
+    [[NSNotificationCenter defaultCenter] postNotificationName:WebSocketBroadcastNotification object:self userInfo:dict];
 }
 
 - (void)didClose
